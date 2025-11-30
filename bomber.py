@@ -13,18 +13,22 @@ def send_sms(target_number, message):
     }
     data = {
         "to": target_number[1:],  # Remove the leading 0
-        "from": "Nighgaa",
+        "from": "Your Name",
         "body": message
     }
     response = requests.post(api_url, headers=headers, data=json.dumps(data))
-    return response.json()
+    if response.status_code == 403:
+        print("Insufficient credits. Please purchase more credits to send SMS messages.")
+    else:
+        return response.json()
 
 def main():
     target_number = input("Enter target phone number: ")
     otp = generate_otp()
     message = f"Your OTP is {otp}"
     response = send_sms(target_number, message)
-    print(response)
+    if response:
+        print(response)
 
 if __name__ == "__main__":
     main()
