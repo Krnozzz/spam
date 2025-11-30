@@ -12,8 +12,8 @@ def send_sms(target_number, message):
         "Authorization": "Basic NTkwM0VFODUyRDRCNDk3Q0FFQjFERURERjYwRTlGRjItMDItRjpRMFBFZkdjS1RySEFVTEdPRmJTZHZRdE5DQXlkTw=="
     }
     data = {
-        "to": target_number,
-        "from": "Your Name",
+        "to": target_number[1:],  # Remove the leading 0
+        "from": "Nighgaa",
         "body": message
     }
     response = requests.post(api_url, headers=headers, data=json.dumps(data))
